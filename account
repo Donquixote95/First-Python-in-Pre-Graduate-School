@@ -1,0 +1,6 @@
+/*
+The Account class is an abstract superclass with the default
+characteristics of a bank account. It maintains a balance and a current
+number of transactions. It does not have a full implementation of
+EndMonth() behavior which should be filled in by its subclasses.
+*/
