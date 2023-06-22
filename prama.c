@@ -1,12 +1,12 @@
 #include <stdio.h>
-#pragma pack(push, 1) // ¹ÙÀÌÆ® ¾ó¶óÀÎ¸ÕÆ®¸¦ 1·Î ¹Ù²Û´Ù.
-// #pragma packÀº ±¸Á¶Ã¼ÀÇ ¹ÙÀÌÆ® ¾ó¶óÀÎ¸ÕÆ® ´ÜÀ§ Å©±â¸¦ °áÁ¤ÇÑ´Ù.
-// push´Â ¹ÙÀÌÆ® ¾ó¶óÀÎ¸ÕÆ®¸¦ ¹Ù²Ü ¶§ ÇöÀçÀÇ ±ÔÄ¢À» ±â¾ïÇÑ´Ù.
+#pragma pack(push, 1) // ë°”ì´íŠ¸ ì–¼ë¼ì¸ë¨¼íŠ¸ë¥¼ 1ë¡œ ë°”ê¾¼ë‹¤.
+// #pragma packì€ êµ¬ì¡°ì²´ì˜ ë°”ì´íŠ¸ ì–¼ë¼ì¸ë¨¼íŠ¸ ë‹¨ìœ„ í¬ê¸°ë¥¼ ê²°ì •í•œë‹¤.
+// pushëŠ” ë°”ì´íŠ¸ ì–¼ë¼ì¸ë¨¼íŠ¸ë¥¼ ë°”ê¿€ ë•Œ í˜„ìž¬ì˜ ê·œì¹™ì„ ê¸°ì–µí•œë‹¤.
 
 
-// pragma Áö½ÃÀÚ´Â ÄÄÆÄÀÏ·¯ÀÇ ÄÄÆÄÀÏ ¹æ¹ýÀ» ¼¼ºÎÀûÀ¸·Î Á¦¾îÇÒ ¶§ »ç¿ë
-// Áö½Ã¸í(directive-name)À» ÅëÇØ ÄÄÆÄÀÏ·¯ÀÇ ¾î¶² ±â´ÉÀ» Á¦¾îÇÒ °ÍÀÎÁö
-// packÀº ±¸Á¶Ã¼ÀÇ ÆÐµù ¹ÙÀÌÆ® Å©±â¸¦ °áÁ¤ÇÏ¸ç, warningÀº °æ°í ¸Þ½ÃÁö¸¦ °ü¸®ÇÑ´Ù.
+// pragma ì§€ì‹œìžëŠ” ì»´íŒŒì¼ëŸ¬ì˜ ì»´íŒŒì¼ ë°©ë²•ì„ ì„¸ë¶€ì ìœ¼ë¡œ ì œì–´í•  ë•Œ ì‚¬ìš©
+// ì§€ì‹œëª…(directive-name)ì„ í†µí•´ ì»´íŒŒì¼ëŸ¬ì˜ ì–´ë–¤ ê¸°ëŠ¥ì„ ì œì–´í•  ê²ƒì¸ì§€
+// packì€ êµ¬ì¡°ì²´ì˜ íŒ¨ë”© ë°”ì´íŠ¸ í¬ê¸°ë¥¼ ê²°ì •í•˜ë©°, warningì€ ê²½ê³  ë©”ì‹œì§€ë¥¼ ê´€ë¦¬í•œë‹¤.
 
 typedef struct 
 {
@@ -14,12 +14,14 @@ typedef struct
     int in;
 } Sample1;
 
-#pragma pack(pop) //  ¹Ù²Ù±â ÀüÀÇ ¹ÙÀÌÆ® ¾ó¶óÀÎ¸ÕÆ® Àû¿ë / À§¿¡¼­ push·Î ±â¾ïÇØµÎ¾ú±â ¶§¹®¿¡ º¹¿ø °¡´É
+printf("ìˆ˜ì •");
 
-// #pragma pack(1) // ÀÌ·¸°Ôµµ °¡´ÉÇÏ´Ù.
+#pragma pack(pop) //  ë°”ê¾¸ê¸° ì „ì˜ ë°”ì´íŠ¸ ì–¼ë¼ì¸ë¨¼íŠ¸ ì ìš© / ìœ„ì—ì„œ pushë¡œ ê¸°ì–µí•´ë‘ì—ˆê¸° ë•Œë¬¸ì— ë³µì› ê°€ëŠ¥
 
-// warningÀº ÄÄÆÄÀÏ·¯°¡ Ç¥½ÃÇÏ´Â °æ°í ¸Þ½ÃÁö¸¦ Á¦°ÅÇÏ´Âµ¥ »ç¿ëÇÒ ¼ö ÀÖ´Ù.
-#pragma warning(disable:4101) // 4101 °æ°í ¸Þ½ÃÁö´Â ¸ðµÎ Ç¥½ÃÇÏÁö ¾ÊÀ½
+// #pragma pack(1) // ì´ë ‡ê²Œë„ ê°€ëŠ¥í•˜ë‹¤.
+
+// warningì€ ì»´íŒŒì¼ëŸ¬ê°€ í‘œì‹œí•˜ëŠ” ê²½ê³  ë©”ì‹œì§€ë¥¼ ì œê±°í•˜ëŠ”ë° ì‚¬ìš©í•  ìˆ˜ ìžˆë‹¤.
+#pragma warning(disable:4101) // 4101 ê²½ê³  ë©”ì‹œì§€ëŠ” ëª¨ë‘ í‘œì‹œí•˜ì§€ ì•ŠìŒ
 
 typedef struct 
 {
@@ -29,8 +31,8 @@ typedef struct
 
 int main(void)
 {
-    printf("Sample1 ±¸Á¶Ã¼ÀÇ Å©±â : %d¹ÙÀÌÆ®\n", sizeof(Sample1));
-    printf("Sample2 ±¸Á¶Ã¼ÀÇ Å©±â : %d¹ÙÀÌÆ®\n", sizeof(Sample2));
+    printf("Sample1 êµ¬ì¡°ì²´ì˜ í¬ê¸° : %dë°”ì´íŠ¸\n", sizeof(Sample1));
+    printf("Sample2 êµ¬ì¡°ì²´ì˜ í¬ê¸° : %dë°”ì´íŠ¸\n", sizeof(Sample2));
 
     return 0;
 }
